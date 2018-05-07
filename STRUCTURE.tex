@@ -1,0 +1,45 @@
+%ce code a été écrit par MICHEL POIRIER
+%FICHIER CONTENANT TOUS LES PACKAGES UTILIES POUR LA RÉALISATION D'UN BEAU DOCUMENT LaTeX
+%SIMPLEMENT FAIRE \input{STRUCTURE.tex} au début du "main.tex", juste après le document class
+
+%packages concernant l'ENCODAGE et la FRANCISATION
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+
+%MARGES
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+
+%packages de math et physique
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%FIGURES
+\usepackage{graphicx, subcaption}
+\usepackage{wrapfig}
+\usepackage{booktabs} %permet d'afficher des plus belles lignes pour les tableaux
+
+%PACKAGES VARIÉS
+\usepackage{multicol} %environnement multicolonnes
+\usepackage{appendix} %gestion des annexes
+\usepackage{minted} %permet de mettre du code avec la syntaxe en couleur
+
+%hyperliens en couleur
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=green, citecolor=blue, anchorcolor=blue]{hyperref}
+\newcommand{\changeurlcolor}[1]{\hypersetup{urlcolor=#1}}
+
+%packages pour la BIBLIOGRAPHIE
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} %pour la numérotation en ordre d'apparition
+\usepackage{csquotes}
+\addbibresource{bibliographie.bib} %nom du fichier.bib
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%COMMANDES%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\d}{\text{d}} %commande pour les dérivées
+
+\newcommand{\HRule}{\rule{\linewidth}{0.2mm}}
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\def \hfillx {\hspace*{-\textwidth} \hfill}
