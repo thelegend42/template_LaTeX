@@ -4,42 +4,88 @@
 
 %packages concernant l'ENCODAGE et la FRANCISATION
 \usepackage[utf8]{inputenc}
+\usepackage{natbib} % le package de bibliographie doit être présent à cet endroit
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 
-%MARGES
-\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+%MARGES du document
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+
+% mise en forme des PARAGRAPHES
+\usepackage{setspace}
+\usepackage[skip=0pt]{parskip}
+\setlength{\parindent}{15pt}
+
+\usepackage{cochineal} % ma POLICE préfére
+\usepackage{lipsum} % générer du texte aléatoire
+\usepackage{adjustbox} % ajuster les tailles/dimensions du texte et des tableaux
+
+% pour formatter les titres des SECTIONS  
+\usepackage{titlesec}
+%\titlespacing*{\section}{0pt}{15pt}{0pt}
+%\titlespacing*{\subsection}{0pt}{10pt}{0pt}
+%\titlespacing*{\subsubsection}{0pt}{5pt}{0pt}
+
+% notes de bas de page
+\usepackage[bottom]{footmisc}
 
 %packages de math et physique
 \usepackage{physics}
 \usepackage{amsmath}
+\usepackage{bm}
+\usepackage{mathrsfs}
 \usepackage{amssymb}
+\usepackage{amsthm}
 
-%FIGURES
-\usepackage{graphicx, subcaption}
-\usepackage{wrapfig}
-\usepackage{booktabs} %permet d'afficher des plus belles lignes pour les tableaux
+% figures
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig} % figures dans le texte
+\usepackage{booktabs} % permet d'afficher des plus belles lignes pour les tableaux
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{pgfplots}
+\pgfplotsset{width=0.45\linewidth,compat=1.9}
+\usepgfplotslibrary{fillbetween}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bbox}
+\usepackage{diagbox}
+\usepackage{lscape}
 
 %PACKAGES VARIÉS
-\usepackage{multicol} %environnement multicolonnes
-\usepackage{appendix} %gestion des annexes
-\usepackage{minted} %permet de mettre du code avec la syntaxe en couleur
+\usepackage{multicol} % environnement multicolonnes
+\usepackage{appendix} % gestion des annexes
+\usepackage{minted} % permet de mettre du code avec la syntaxe en couleur
+\usepackage{enumitem} % pour énumérer (listes pimpées)
+\usepackage{comment} % environnement de commentaires
 
-%hyperliens en couleur
-\usepackage[colorlinks=true, linkcolor=red, urlcolor=green, citecolor=blue, anchorcolor=blue]{hyperref}
+% numérotation des équations
+%\numberwithin{equation}{subsection} % numéroter les équations avec le # de sous-section
+
+% noms des tableaux
+\addto\captionsfrench{\def\tablename{Tableau}} % changer "Table" pour "Tableau"
+
+% hyperliens en couleur
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
 \newcommand{\changeurlcolor}[1]{\hypersetup{urlcolor=#1}}
+\usepackage{url}
 
-%packages pour la BIBLIOGRAPHIE
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} %pour la numérotation en ordre d'apparition
+
+% shits de bibliographie
+\setcitestyle{authoryear}
 \usepackage{csquotes}
-\addbibresource{bibliographie.bib} %nom du fichier.bib
+
+% faire un INDEX
+\usepackage{makeidx}
+\usepackage{tocbibind} % ajouter l'index et la biblio dans le ToC
+\makeindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%COMMANDES%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\d}{\text{d}} %commande pour les dérivées
-
-\newcommand{\HRule}{\rule{\linewidth}{0.2mm}}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
 \newenvironment{Figure}
   {\par\medskip\noindent\minipage{\linewidth}}
   {\endminipage\par\medskip}
 
 \def \hfillx {\hspace*{-\textwidth} \hfill}
+
+%\renewcommand{\d}{\text{d}} %commande pour les dérivées, mais pas vraiment besoin à cause du package physics
+%\renewbibmacro{in:}{. Dans~:} % peut être utile dans certains formats de biblio
