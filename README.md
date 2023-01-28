@@ -1,3 +1,4 @@
 # PUBLIC
-## sous-titre
-template and other shits i wanna share
+## Template LaTeX pour moi et mes amis
+
+Ça fait plaisir.
