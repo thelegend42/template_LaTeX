@@ -1,5 +1,5 @@
-# PUBLIC
+# Template LaTeX
 
-Template LaTeX pour moi et mes amis.
+Template LaTeX pour des travaux universitaires à l'Université Laval.
 
 Ça fait plaisir.
