@@ -24,7 +24,7 @@ Pour utiliser ce modèle, suivez ces étapes :
 
 Si vous souhaitez contribuer à l'amélioration de ce modèle, n'hésitez pas à ouvrir une issue ou à soumettre une demande de fusion (pull request) sur GitHub.
 
-Nous espérons que ce modèle vous sera utile pour créer vos travaux universitaires à l'Université Laval. Bonne rédaction !
+En espérant que ce modèle vous sera utile pour créer vos travaux universitaires à l'Université Laval. Bonne rédaction !
 
 ---
 
